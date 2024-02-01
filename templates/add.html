@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<form method="POST" enctype="multipart/form-data">
+  {% csrf_token %}
+
+  <input type="text" name="name" placeholder="enter your flower name"><br><br>
+  <input type="text" name="sname" placeholder="enter the scientific name "><br><br>
+  <input type="text" name="desc" placeholder="enter about it"><br><br>
+  <input type="file" name="img"><br><br>
+  <input type="submit"><br><br>
+
+
+
+</form>
+{% endblock %}

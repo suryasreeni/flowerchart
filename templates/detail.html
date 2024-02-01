@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% block body %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        h4,h5,h6{
+        color:white;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col md-6">
+          <img src="{{flower.img.url}}" width="600" height="400">
+        </div>
+    <div class="col md-6">
+       <h4>{{flower.name}}</h4>
+        <h5>{{flower.sname}}</h5>
+        <h6>{{flower.desc}}</h6>
+        <a class="btn btn-warning" href="{% url 'flowerapp:update' flower.id %}">update</a>
+        <a class="btn btn-danger" href="{% url 'flowerapp:delete' flower.id %}">delete</a>
+    </div>
+
+    </div>
+</div>
+</body>
+</html>
+
+{% endblock %}
+
+
+
+
